@@ -4,138 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudio Jurídico Roan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dorado: #c5a059;
-            --oscuro: #0a0a0a;
-            --gris-suave: #f4f4f4;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Raleway', sans-serif;
-            background-color: var(--oscuro);
-            color: white;
-            scroll-behavior: smooth;
-        }
-
-        /* Hero Section */
-        header {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920') center/cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-bottom: 3px solid var(--dorado);
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: var(--dorado);
-            margin-bottom: 10px;
-        }
-
-        h1 { font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 3px; }
-
-        .btn-contacto {
-            margin-top: 20px;
-            padding: 12px 30px;
-            border: 2px solid var(--dorado);
-            color: var(--dorado);
-            text-decoration: none;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .btn-contacto:hover { background: var(--dorado); color: black; }
-
-        /* Secciones */
-        section { padding: 80px 10%; text-align: center; }
-        
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: #151515;
-            padding: 30px;
-            border: 1px solid #333;
-            transition: transform 0.3s;
-        }
-
-        .card:hover { border-color: var(--dorado); transform: translateY(-10px); }
-
-        .card h3 { color: var(--dorado); font-family: 'Cinzel', serif; }
-
-        /* Formulario */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        input, textarea {
-            padding: 15px;
-            background: #222;
-            border: 1px solid #444;
-            color: white;
-        }
-
-        footer {
-            padding: 40px;
-            background: #050505;
-            border-top: 1px solid var(--dorado);
-            text-align: center;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">ROAN</div>
-        <h1>ESTUDIO JURÍDICO ROAN</h1>
-        <p style="font-style: italic; color: #ccc;">"Litigio con Firmeza, Asesoría con Humanidad"</p>
-        <a href="#contacto" class="btn-contacto">CONSULTAR AHORA</a>
-    </header>
-
-    <section id="nosotros">
-        <h2 style="color: var(--dorado); font-family: 'Cinzel';">Sobre Nosotros</h2>
-        <p>Liderado por la Abogada María Lidieth Roque Ancajima, nuestro estudio se especializa en brindar soluciones legales estratégicas con un enfoque humano y ético.</p>
-    </section>
-
-    <section id="servicios" style="background-color: #0f0f0f;">
-        <h2 style="color: var(--dorado); font-family: 'Cinzel';">Nuestras Especialidades</h2>
-        <div class="grid-servicios">
-            <div class="card"><h3>Derecho Civil</h3><p>Contratos, Propiedades y Sucesiones.</p></div>
-            <div class="card"><h3>Derecho de Familia</h3><p>Divorcios, Alimentos y Tenencia.</p></div>
-            <div class="card"><h3>Derecho Penal</h3><p>Defensa técnica y asesoría especializada.</p></div>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Estudio Jurídico Roan">
         </div>
-    </section>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#perfil">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section id="contacto">
-        <h2 style="color: var(--dorado); font-family: 'Cinzel';">Contacto</h2>
-        <form>
-            <input type="text" placeholder="Nombre Completo" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <textarea rows="5" placeholder="Cuéntenos su caso..."></textarea>
-            <button type="submit" class="btn-contacto" style="background: none; cursor: pointer;">ENVIAR MENSAJE</button>
+<section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Litigio con Firmeza</h1>
+        <p>Asesoría con Humanidad</p>
+        <a href="#servicios" class="btn">Conozca Nuestros Servicios</a>
+    </div>
+</section>
+
+<section id="perfil" class="perfil">
+    <div class="perfil-card">
+        <img src="img/abogada.png" alt="Abogada María Lizbeth Roque Ancajima">
+        <div>
+            <h2>María Lizbeth Roque Ancajima</h2>
+            <p><strong>Abogada – Conciliadora</strong></p>
+            <p>ICAP 05437</p>
+            <p>
+                El Estudio Jurídico Roan ofrece asesoría legal especializada,
+                brindando soluciones firmes con un enfoque humano.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NUEVA SECCIÓN DE SERVICIOS ===== -->
+<section id="servicios" class="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+        <div class="servicio-card">
+            <div class="servicio-icono">⚖️</div>
+            <h3>Derecho Civil</h3>
+            <p>Contratos, sucesiones, obligaciones y responsabilidad civil. Asesoría integral para personas y empresas.</p>
+        </div>
+        <div class="servicio-card">
+            <div class="servicio-icono">🏛️</div>
+            <h3>Derecho de Familia</h3>
+            <p>Divorcios, tenencia, alimentos, filiación y violencia familiar. Acompañamiento con sensibilidad y firmeza.</p>
+        </div>
+        <div class="servicio-card">
+            <div class="servicio-icono">💼</div>
+            <h3>Derecho Laboral</h3>
+            <p>Despidos, contratos de trabajo, negociaciones colectivas y defensa del trabajador o empleador.</p>
+        </div>
+        <div class="servicio-card">
+            <div class="servicio-icono">🔒</div>
+            <h3>Derecho Penal</h3>
+            <p>Defensa penal estratégica, asesoría a víctimas, delitos económicos y penitenciario.</p>
+        </div>
+        <div class="servicio-card">
+            <div class="servicio-icono">📊</div>
+            <h3>Conciliación Extrajudicial</h3>
+            <p>Soluciones rápidas y efectivas mediante el diálogo, evitando procesos judiciales largos.</p>
+        </div>
+        <div class="servicio-card">
+            <div class="servicio-icono">📝</div>
+            <h3>Asesoría Preventiva</h3>
+            <p>Elaboración de contratos, testamentos, actas y documentos legales a medida.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto-grid">
+        <div class="contacto-info">
+            <p>📞 <strong>Teléfono:</strong> 995248477</p>
+            <p>📍 <strong>Ubicación:</strong> Lima, Perú</p>
+            <p>✉️ <strong>Email:</strong> contacto@roanlegal.pe</p>
+        </div>
+        <form action="#" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
         </form>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Estudio Jurídico Roan - Todos los derechos reservados.</p>
-        <p>Sullana, Piura, Perú | Tel: 995248477</p>
-    </footer>
+<footer class="footer">
+    <p>© 2026 Estudio Jurídico Roan — Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
